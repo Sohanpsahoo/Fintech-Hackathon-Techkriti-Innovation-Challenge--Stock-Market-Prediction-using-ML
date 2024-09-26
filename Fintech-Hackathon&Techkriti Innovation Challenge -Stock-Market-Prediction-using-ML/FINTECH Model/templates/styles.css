@@ -1,0 +1,67 @@
+/* Add your CSS styling here */
+
+header {
+    position: relative;
+    text-align: center; /* Center the image and text within the header */
+}
+
+img {
+    max-width: 100%; /* Make sure the image doesn't exceed the container's width */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Remove any default spacing around the image */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+div {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 20px;
+    background-image: url("../static/stock-market-prediction-using-ai.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Set the height of the body to the full viewport height */
+    position: relative; /* Set position to relative for overlay positioning */
+    background-color: black; /* Add a black background */
+    padding: 20px; /* Add padding for space between text and rectangle */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('overlay-image.png');
+    background-size: cover;
+    opacity: 0.5; /* Adjust as needed */
+}
+
+/* Add a class for the overlay on the header */
+.header-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('');
+    background-size: cover;
+    opacity: 0.5; /* Adjust as needed */
+}
+
+/* Additional styles for the header text */
+/* header h1 {
+    z-index: 1; /* Place text above the overlay */
+} */
+
+/* Adjust the position of the header image and overlay */
+header img {
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Place image above the overlay */
+}

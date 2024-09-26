@@ -1,0 +1,40 @@
+?<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Prediction App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="styles.css">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body>
+    <header>
+        <!-- <img src="Techkriti_blue.png" alt="Header Image"> -->
+        <h1>WELCOME TO TECHKRITI INNOVATION CHALLENGE 2024 !</h1>
+        <!-- Other header content goes here -->
+    </header>
+
+    <div>
+        <h1>Stock Market Prediction using Machine learning and AI</h1>
+
+        {% if price is not none %}
+        <h2>Company Name:</h2>
+        <p>{{ company }}</p>
+        <h2>Date:</h2>
+        <p>{{ date }}</p>
+        <h2>Predicted Price:</h2>
+        <p>{{ price }}</p>
+        <h2>Model Accuracy:</h2>
+        <p>{{ accuracy }}</p>
+        {% endif %}
+    </div>
+
+    <!-- The rest of your HTML content -->
+
+</body>
+
+</html>
